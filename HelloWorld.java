@@ -5,10 +5,14 @@ public class HelloWorld {
         String message = "Hello, ";
 
         if (args.length > 0) {
+
             for (String name : args) {
                 message += name + " ";
             }
-            message = message.trim() + "!";
+
+            message = message.substring(0, message.length() - 1);
+            message += "!";
+
         } else {
             message += "World!";
         }
