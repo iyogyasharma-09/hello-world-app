@@ -2,15 +2,17 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-        String name;
+        String message = "Hello ";
 
         if (args.length > 0) {
-            name = args[0];
+            for (String name : args) {
+                message += name + " ";
+            }
         } else {
-            name = "World";
+            message += "World";
         }
 
-        System.out.println("Hello " + name);
+        System.out.println(message.trim());
     }
 
 }
