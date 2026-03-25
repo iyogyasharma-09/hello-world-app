@@ -2,19 +2,13 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-        String message = "Hello, ";
+        String message;
 
         if (args.length > 0) {
-
-            for (String name : args) {
-                message += name + " ";
-            }
-
-            message = message.substring(0, message.length() - 1);
-            message += "!";
-
+            String names = String.join(" ", args);
+            message = "Hello, " + names + "!";
         } else {
-            message += "World!";
+            message = "Hello, World!";
         }
 
         System.out.println(message);
